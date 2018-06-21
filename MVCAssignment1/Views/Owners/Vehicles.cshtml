@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MVCAssignment1.Models.Vehicle>
 
 @{
-    ViewBag.Title = "Vehicles in for "+Html.DisplayNameFor(model=> model.OwnerId);
+    ViewBag.Title = "Vehicles";
 }
 
 <h2>Vehicles</h2>
@@ -29,9 +29,7 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.OwnerId)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Vin)
         </td>

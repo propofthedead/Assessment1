@@ -15,9 +15,8 @@ namespace MVCAssignment1.Controllers
         private CarsContext db = new CarsContext();
 
 
-		public ActionResult Vehicles(int? id) {
-			if (id == null) { return new HttpStatusCodeResult(HttpStatusCode.BadRequest); }
-			Owner owner = db.Owners.Find(id);
+		public ActionResult Vehicles(Owner owner) {
+			if (owner == null) { return new HttpStatusCodeResult(HttpStatusCode.BadRequest); }
 			var vehicles = new List<Vehicle>();
 			var cars = db.Vehicles.Where(e => e.OwnerId == owner.Id).ToArray();
 			foreach (var car in cars) {
