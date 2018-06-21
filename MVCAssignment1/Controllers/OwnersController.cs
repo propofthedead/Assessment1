@@ -15,9 +15,14 @@ namespace MVCAssignment1.Controllers
         private CarsContext db = new CarsContext();
 
 
-		public ActionResult Vehicles() {
-
-			return View();
+		public ActionResult Vehicles(int? id) {
+			Owner owner = db.Owners.Find(id);
+			var vehicles = new List<Vehicle>();
+			var cars = db.Vehicles.Where(e => e.OwnerId == id).ToArray();
+			foreach (var car in cars) {
+				vehicles.Add(car);
+			}
+			return View(vehicles);
 		}
         // GET: Owners
         public ActionResult Index()
