@@ -16,9 +16,10 @@ namespace MVCAssignment1.Controllers
 
 
 		public ActionResult Vehicles(int? id) {
+			if (id == null) { return new HttpStatusCodeResult(HttpStatusCode.BadRequest); }
 			Owner owner = db.Owners.Find(id);
 			var vehicles = new List<Vehicle>();
-			var cars = db.Vehicles.Where(e => e.OwnerId == id).ToArray();
+			var cars = db.Vehicles.Where(e => e.OwnerId == owner.Id).ToArray();
 			foreach (var car in cars) {
 				vehicles.Add(car);
 			}

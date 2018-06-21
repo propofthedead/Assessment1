@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MVCAssignment1.Models.Vehicle>
 
 @{
-    ViewBag.Title = "Vehicles";
+    ViewBag.Title = "Vehicles in for "+Html.DisplayNameFor(model=> model.OwnerId);
 }
 
 <h2>Vehicles</h2>
@@ -11,9 +11,7 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Vin)
         </th>
