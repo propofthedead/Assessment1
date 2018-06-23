@@ -13,6 +13,8 @@ namespace MVCAssignment1.Models
 		public string Model { get; set; }
 		public string Make { get; set; }
 		public int Year { get; set; }
+		
+		// GD: Missing the virtual Owner property
 
 		public Vehicle() { }
 	}
