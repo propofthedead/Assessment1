@@ -162,6 +162,10 @@
     <Compile Include="Migrations\201806211340573_added vehicle.Designer.cs">
       <DependentUpon>201806211340573_added vehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806241856043_added a virtual owner.cs" />
+    <Compile Include="Migrations\201806241856043_added a virtual owner.Designer.cs">
+      <DependentUpon>201806241856043_added a virtual owner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CarsContext.cs" />
     <Compile Include="Models\Owner.cs" />
@@ -239,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806211340573_added vehicle.resx">
       <DependentUpon>201806211340573_added vehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806241856043_added a virtual owner.resx">
+      <DependentUpon>201806241856043_added a virtual owner.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
